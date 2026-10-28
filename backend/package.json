@@ -1,0 +1,41 @@
+{
+  "name": "kozett-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "check": "tsc --noEmit",
+    "test": "node --test --import tsx ./src/**/*.test.ts",
+    "seed:demo": "tsx src/scripts/seed-demo.ts",
+    "seed:demo:verify": "tsx src/scripts/seed-demo.ts --verify",
+    "seed:demo:remove": "tsx src/scripts/seed-demo.ts --remove",
+    "admin:bootstrap": "tsx src/scripts/bootstrap-admin.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "file-type": "^22.2.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.8.0",
+    "multer": "^2.5.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.1",
+    "@types/cookie-parser": "^1.4.6",
+    "@types/cors": "^2.8.5",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
